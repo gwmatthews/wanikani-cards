@@ -1,0 +1,34 @@
+%    kanji from wanikani
+
+\documentclass[letterpaper]{article}
+\usepackage{nopageno}
+\usepackage[left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{pgffor}
+
+\newcommand{\readings}[1]{\tcbincludegraphics[title=Level #1]{img/kanji-readings-#1.png}\vspace*{1cm}}
+
+\newcommand{\kanji}[1]{\tcbincludegraphics[title=Level #1]{img/kanji-#1.png}\vspace*{1cm}}
+
+\begin{document}
+\tcbset{colback=white, colbacktitle=black!10, coltitle=black, height=10cm}
+\centering
+\vspace*{3cm}
+{\Huge Wanikani kanji study cards}
+
+\vspace*{2cm}
+
+{\LARGE George Matthews}
+
+\vspace*{1cm}
+
+\includegraphics[width=0.5cm]{img/cc.png}   
+
+\pagebreak
+\vspace*{1cm}
+\foreach \n in {1,...,20}{\readings{\n}}\pagebreak
+\vspace*{1cm}
+\foreach \n in {1,...,20}{\kanji{\n}}
+\pagebreak
+\end{document} 
