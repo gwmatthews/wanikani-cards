@@ -13,22 +13,11 @@
 
 \begin{document}
 \tcbset{colback=white, colbacktitle=black!10, coltitle=black, height=10cm}
-\centering
-\vspace*{3cm}
-{\Huge Wanikani kanji study cards}
 
-\vspace*{2cm}
-
-{\LARGE George Matthews}
-
-\vspace*{1cm}
-
-\includegraphics[width=0.5cm]{img/cc.png}   
-
-\pagebreak
-\vspace*{1cm}
-\foreach \n in {1,...,60}{\readings{\n}}\pagebreak
 \vspace*{1cm}
 \foreach \n in {1,...,60}{\kanji{\n}}
+\pagebreak
+\vspace*{1cm}
+\foreach \n in {1,...,60}{\readings{\n}}
 \pagebreak
 \end{document} 
