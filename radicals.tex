@@ -1,0 +1,31 @@
+%    kanji from wanikani
+
+\documentclass[letterpaper]{article}
+\usepackage{nopageno}
+\usepackage[left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{pgffor}
+
+\newcommand{\meanings}[1]{\tcbincludegraphics[title=Level #1]{img/radicals-meanings-#1.png}\vspace*{0.5cm}}
+
+\newcommand{\radicals}[1]{\tcbincludegraphics[title=Level #1]{img/radicals-#1.png}\vspace*{0.5cm}}
+
+\begin{document}
+\tcbset{colback=white, colbacktitle=black!10, coltitle=black, height=8cm}
+
+\vspace*{1cm}
+\foreach \n in {1,...,6}{\radicals{\n}}
+\pagebreak
+\vspace*{1cm}
+\foreach \n in {1,...,6}{\meanings{\n}}
+\pagebreak
+
+\tcbset{colback=white, colbacktitle=black!10, coltitle=black, height=6cm}
+\vspace*{1cm}
+\foreach \n in {7,...,20}{\radicals{\n}}
+\pagebreak
+\vspace*{1cm}
+\foreach \n in {7,...,20}{\meanings{\n}}
+\pagebreak
+\end{document} 
